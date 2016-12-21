@@ -1,11 +1,14 @@
-@import "normalize";
-@import "layout";
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
 $primary: #ffcc00;
 $primary-font:'Raleway',sans-serif;
 $heading-font:'Roboto',sans-serif;
+@import "normalize";
+@import "layout";
+@import "slick";
+@import "slick-theme";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 
 
 body{
@@ -125,7 +128,7 @@ textarea {
 		}
 	}
 		&__position {
-			font-family: Raleway;
+			font-family: $primary-font;
 color:  #666666;
 font-size: 24px;
 font-weight: 400;
@@ -163,7 +166,13 @@ margin-top: 0px;
 }
 
 .ba-team-slider {
-	display: flex;
+	&__slide {
+	display: flex !important;
+	outline-style: none;
+
+	}
+
+
 	&__image, &__content{
 		flex:1 1 50%;
 	}
@@ -171,6 +180,7 @@ margin-top: 0px;
 		padding: 0 68px 0 83px;
 		display: flex;
 		align-items:center;
+
 		img {
 			border: 1px solid $primary;
 			display: block;
@@ -209,7 +219,7 @@ margin-top: 0px;
 			display: block;
 			height: 100%;
 			width: 100%;
-			fill:currentColor;
+			fill: currentColor;
 		}
 
 	}
