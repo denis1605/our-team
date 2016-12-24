@@ -2,9 +2,11 @@
 	"use strict";
 
 
-	$('.ba-team-slider').slick({
+	$('.ba-slider').slick({
 
 		dots:true,
+
+
 
 
 

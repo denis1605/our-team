@@ -1,37 +1,82 @@
-$primary: #ffcc00;
-$primary-font:'Raleway',sans-serif;
-$heading-font:'Roboto',sans-serif;
+
 @import "normalize";
 @import "layout";
 @import "slick";
 @import "slick-theme";
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 
 
 body{
-	font: 500 14px/1.7 'Raleway', sans-serif;
-	color: #333;
+
+}
+.ba-logo {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	z-index: 9999;
+}
+.ba-menu {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	z-index: 9999;
+	& li {
+		float: left;
+		padding-left: 37px;
+
+	}
+
+}
+.ba-menu li:first-child {
+	padding-left: 0;
+}
+.ba-menu li a{
+	display: block;
+	text-decoration: none;
+	color:  #fff;
+	padding-top: 18px;
+	position: relative;
 }
 
 
 
 /* Layout */
 .ba-container{
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
 	max-width: 1170px;
-}
-h1,h2,h3,h4,h5,h6 {
 
-	font-weight: 900;
-	line-height: 1.2;
-	font-family: $heading-font;
+
 
 
 }
+
+.ba-slider {
+
+	&__slide {
+		min-height: 100vh;
+		color:#fff;
+
+		background: 50%;
+		background-size: cover;
+		.ba-container {
+			min-height: 100vh;
+			padding: 100px 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+		}
+
+	}
+
+}
+
 
 
 /* Typography */
@@ -47,25 +92,13 @@ input[type="submit"],
 input[type="button"],
 button,
 .ba-button{
-	display: inline-block;
-	border-width: 1px;
-border-color:  #ffcc00;
-border-style: solid;
-width: 118px;
-height: 22px;
-text-decoration: none;
-line-height: 1.5;
-font-family: OpenSans;
-color:  #666666;
-font-size: 14px;
-font-weight: 700;
-text-align: center;
-text-transform: uppercase;
-&:hover {
-	color: #FFF;
-	background-color: $primary;
 
-}
+
+
+	&:hover {
+
+
+	}
 }
 input[type="submit"]:hover,
 input[type="button"]:hover,
@@ -98,129 +131,4 @@ select:focus {
 }
 textarea {
 
-}
-.ba-team {
-	padding: 110px 0;
-	text-align: center;
-	&__title{
-		text-transform: uppercase;
-		font-size: 60px;
-		color: $primary;
-		position: relative;
-		margin-top: 0px;
-		&:after{
-			content: "";
-			display: block;
-			width: 450px;
-			height: 1px;
-			background: $primary;
-			margin: 35px auto 0;
-		}
-		&:before{
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			background:#fff url(../img/bonfire.svg) 50% no-repeat;
-			height: 20px;
-			width: 40px;
-			transform: translate(-50%, 50%)
-		}
-	}
-		&__position {
-			font-family: $primary-font;
-color:  #666666;
-font-size: 24px;
-font-weight: 400;
-line-height: 36px;
-text-align: center;
-margin-top: 0px;
-		}
-	&__name {
-		color:  #666666;
-		font-size: 36px;
-		text-align: center;
-		letter-spacing: 0.02em;
-		margin-bottom: 23px;
-		&:after{
-			content: "";
-			display: block;
-			width: 103px;
-			height: 1px;
-			background: $primary;
-			margin: 24px auto 0;
-		}
-
-	}
-	&__subtitle{
-		text-transform: uppercase;
-		font-size: 18px;
-		font-weight: 500;
-		color: #333;
-		font-family: $primary-font;
-		letter-spacing: 0.02em;
-		color: #898f8f;
-		margin: 0;
-	}
-
-}
-
-.ba-team-slider {
-	&__slide {
-	display: flex !important;
-	outline-style: none;
-
-	}
-
-
-	&__image, &__content{
-		flex:1 1 50%;
-	}
-	&__image {
-		padding: 0 68px 0 83px;
-		display: flex;
-		align-items:center;
-
-		img {
-			border: 1px solid $primary;
-			display: block;
-			box-shadow:40px 0 0 -20px #fff,
-			-40px 0 0 -20px #fff,
-			0 40px 0 -20px #fff,
-			0 -40px 0 -20px #fff;
-		}
-
-	}
-	&__image-border {
-		border: 1px solid $primary;
-		padding: 15px;
-	}
-	&__content {
-		padding: 55px 68px 70px 83px;
-		border-left: 1px solid $primary;
-	}
-}
-
-
-.ba-socials{
-	a {
-		display: inline-block;
-		width: 30px;
-		height: 30px;
-		color: #ccc;
-		border: 2px solid currentColor;
-		border-radius:50%;
-		text-align: center;
-		padding: 5px;
-		&:hover {
-			color: $primary;
-		}
-		svg {
-			display: block;
-			height: 100%;
-			width: 100%;
-			fill: currentColor;
-		}
-
-	}
 }
